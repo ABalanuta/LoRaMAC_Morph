@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+if [ $# -gt 0 ]; then
+	dev=/dev/ttyUSB$1
+	ccbootutil -verbose $dev sync
+	ccbootutil -verbose $dev reset
+	exit 0
+fi
+
+for dev in /dev/ttyUSB?; do
+	ccbootutil -verbose $dev sync
+	ccbootutil -verbose $dev reset
+done
+
+wait

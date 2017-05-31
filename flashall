@@ -1,0 +1,9 @@
+#!/bin/bash
+
+image=${1:-Debug/LoRaBug_TXRX.out}
+
+for dev in /dev/ttyUSB?; do
+	ccbootutil -verbose $dev prgm $image &
+done
+
+wait

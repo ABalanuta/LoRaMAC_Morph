@@ -1,0 +1,14 @@
+#!/bin/bash
+
+num=${1:-0}
+
+dev=/dev/ttyUSB${num}
+
+if [ -e "$dev" ]; then
+	echo "# Found $dev"
+	stty -F $dev 115200
+	cat $dev
+else
+	echo "# No device $dev found"
+	exit 1
+fi

@@ -1,0 +1,12 @@
+package.xdc
+package.xs
+package/xconfig_LoRaMac.sch
+package/.vers_g180
+package/.vers_r170
+package/.vers_b160
+package/.xdc-B21
+package/xconfig_LoRaMac.java
+package/xconfig_LoRaMac.class
+package/package_xconfig_LoRaMac.c
+package/package.defs.h
+package/xconfig_LoRaMac.ccs
